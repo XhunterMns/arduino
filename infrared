@@ -1,0 +1,19 @@
+int LED = 4 ;
+int IR = A0;
+int IRETAT;
+
+void setup() {
+pinMode(LED,OUTPUT);
+pinMode(IR,INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+IRETAT=digitalRead(IR);
+if(IRETAT==0){
+  digitalWrite(LED,HIGH);
+}
+else
+{digitalWrite(LED,LOW);
+}
+}
