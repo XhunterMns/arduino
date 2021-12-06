@@ -1,0 +1,18 @@
+int motor1pin1 = A1;
+int motor1pin2 = 3;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(motor1pin1, OUTPUT);
+}
+
+void loop() {
+analogWrite(motor1pin1, 5000  ); // vitesse de moteur
+  digitalWrite(motor1pin1, HIGH); // tourne a gauche 
+  digitalWrite(motor1pin2, LOW);
+
+  delay(1000);
+    digitalWrite(motor1pin1, LOW);// tourne a droite
+  digitalWrite(motor1pin2, HIGH);
+  delay(1000);
+}
